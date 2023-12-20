@@ -1,7 +1,8 @@
 ---
 output:
-  pdf_document: null
+  pdf_document: 
   number_sections: yes
+  citation_package: natbib
   geometry: left = 2.5cm, right = 2cm, top = 2cm, bottom = 2cm
   fontsize: 11pt
   html_document:
@@ -15,9 +16,9 @@ header-includes:
 - \usepackage{lastpage}
 - \usepackage{dcolumn}
 - \usepackage{natbib}
-- \bibliography{bibliography.bib}
 - \usepackage{setspace}
 - \onehalfspacing
+bibliography: bibliography.bib
 ---
 
 ```{r setup, include=FALSE}
@@ -90,7 +91,7 @@ December 2023
 
 \spacing{1.5}
 
-Wildfire is the major standing disturbance in Canada. The area burned in Canada over the years has continued to progress with climate change as well as carbon released due to fire mediated disturbances for the year 2023. Here, statistical models will be established between field combustion and remotely sensed data from Landsat imagery as well as other environmental and climate variables obtained from the GEE datasets to estimate carbon emitted from the 2023 wildfires in order to derive a combustion map for 2023. The combustion datasets described here can be used across local and global scale for fire combustion science. The combustion datasets which will be described here [github.com/ChinyereRuth/Canada-Carbon-emission-RDM] can be used for local to continental-scale applications of boreal fire science.
+Wildfire is the major standing disturbance in Canada.The area burned in Canada over the years has continued to progress with climate change as well as carbon released due to fire mediated disturbances for the year 2023. Here, statistical models will be established between field combustion and remotely sensed data from Landsat imagery as well as other environmental and climate variables obtained from the GEE datasets to estimate carbon emitted from the 2023 wildfires in order to derive a combustion map for 2023. The combustion datasets described here can be used across local and global scale for fire combustion science. The combustion datasets which will be described here [github.com/ChinyereRuth/Thesis] can be used for local to continental-scale applications of boreal fire science.
 
 Keywords: Wildfire, carbon, spatial modelling, boreal forests 
 
@@ -139,9 +140,14 @@ Keywords: Wildfire, carbon, spatial modelling, boreal forests
 \newpage
 
 ```{r biblio, child = 'bibliography.Rmd'}
+
 ```
 
 \newpage
 
 ```{r appendix, child = 'appendix.Rmd'}
 ```
+
+
+
+
