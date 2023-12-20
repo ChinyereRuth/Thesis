@@ -5,11 +5,60 @@ output: pdf_document
 
 # Results
 
-Some more guidlines from the School of Geosciences.
+```{r echo=FALSE}
+# Load required packages FOR RANGER RANDOM FOREST MODELLING
+ #install.packages("ranger")
+library(ranger)
 
-This section should summarise the findings of the research referring to all figures, tables and statistical results (some of which may be placed in appendices).
-- include the primary results, ordered logically - it is often useful to follow the same order as presented in the methods.
-- alternatively, you may find that ordering the results from the most important to the least important works better for your project.
-- data should only be presented in the main text once, either in tables or figures; if presented in figures, data can be tabulated in appendices and referred to at the appropriate point in the main text.
+# Load your data from Excel
+Closs <- readxl::read_excel("/Users/chinyereottah/Desktop/Mac/R_course/Assignment8/Thesis/data/AGC-rangerforests-TC-Nov.xlsx")
 
-**Often, it is recommended that you write the results section first, so that you can write the methods that are appropriate to describe the results presented. Then you can write the discussion next, then the introduction which includes the relevant literature for the scientific story that you are telling and finally the conclusions and abstract – this approach is called writing backwards.**
+# Check the structure of your data
+str(Closs)
+
+# Split your data into training and testing sets
+set.seed(123)  # for reproducibility
+sample_index <- sample(1:nrow(Closs), 0.7 * nrow(Closs))  # 70% for training
+
+train_data <- Closs[sample_index, ]
+test_data <- Closs[-sample_index, ]
+
+# Specify the model
+# Assuming 'AGC' is the dependent variable
+# Adjust the formula according to your data frame structure
+ formula <- AGC ~ B3 + B5 + B6 + Gness + Max_T + Mean_RH + Mean_T + dNBR + Canopcover + GDEM
+
+
+# Train the Random Forest model with the 'importance' option
+rf_model <- ranger(formula, data = train_data, importance = "impurity")
+
+# Make predictions on the test set
+predictions <- predict(rf_model, data = test_data)$predictions
+
+# Evaluate the model for a continuous variable (e.g., Mean Absolute Error)
+mae <- mean(abs(predictions - test_data$AGC))
+
+cat("Mean Absolute Error (MAE):", mae, "\n")
+
+# Access feature importance values
+feature_importance <- importance(rf_model)
+
+# Print feature importance
+print(feature_importance)
+
+# Visualize feature importance using a bar plot
+
+
+barplot(feature_importance, main = "Variable Importance", col = "skyblue", horiz = TRUE, cex.main = 1.2, cex.names = 0.9, cex.axis = 0.9)
+
+# Make predictions on the test set
+predictions <- predict(rf_model, data = test_data)$predictions
+
+# Calculate R-squared
+correlation <- cor(predictions, test_data$AGC)
+rsquared <- correlation^2
+
+cat("R-squared:", rsquared, "\n")
+
+```
+

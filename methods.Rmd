@@ -3,11 +3,11 @@ title: ''
 output: pdf_document
 ---
 
-# Methods 
+# 2.0 Methods 
 
 \vspace{0.5cm}
 
-## Study area 
+## 2.1 Study area 
 
 The study area (Figure 1) is Canada’s forests region which comprises of boreal, great lakes, acadian, carolinian, subalpine, columbia, montane and coastal forest. Tree species within the zone are generally conifers such as black spruce, white spruce, Tamarack, balsam fir and jack pine while deciduous trees within the zone includes Aspen, balsam poplar and paper bitch. The climate of Canada’s forest varies but it  is mainly characterized by cold winters and short summer (Brandt, 2009), although we are beginning to observed more warmer winter due to climate change. The mean temperature in Canada’s boreal forests ranges 10ºC- 20ºC   and this varies from region to region  (Zhang et al., 2019) 
 
@@ -24,7 +24,7 @@ knitr::include_graphics("/Users/chinyereottah/Desktop/Mac/R_course/Assignment_R/
 
 ## 2.2 Field data 
 
-### Field combustion area 
+### 2.2.1 Field combustion area 
 
 To estimate the amount of C loss across Canada’s major disturbances, Field combustion measurements for the year 2014 and 2015 as shown in Figure 2 were acquired from a number of publications that  carried out combustion measurement within Canada’s boreal forests and published online as a single database (Walker et al., 2020a). 
 
@@ -35,13 +35,13 @@ knitr::include_graphics("/Users/chinyereottah/Desktop/Mac/R_course/Assignment_R/
 
 ```
 
-## Burned-area, harvest and insect disturbance mapping 
+## 2.2.2 Burned-area, harvest and insect disturbance mapping 
 
 Disturbnace map across the entire sty area will be drive using a  random forest approach where we integrated different spectral indices, spectral bands and environmental variables. A threshold value established from literature and other filed collected disturbance site will be used on the final disturbance product to identify each disturbance types(fire, harvest and insect infestation)  within Canada’s forests.  
 
-## Combustion models  
+##2.3 Combustion models  
 
-### Predictor variables 
+### 2.3.1 Predictor variables 
 
 Field combustion measurements for aboveground and belowground C loss was obtained from Walker et al. (2020) and related to gridded environmental, fire severity and remotely sensed variables of combustion (Figure 3). 
 ```{r echo=FALSE, out.height="60%", fig.show='hold', fig.align="center", fig.cap="method to map C emissions from disturbance "}
@@ -50,11 +50,11 @@ knitr::include_graphics("/Users/chinyereottah/Desktop/Mac/R_course/Assignment_R/
 ```
 The predictor variables of combustion used in this study was selected first by spanning across the literature and also discussing with experts and also further validated with a selection from random forests. 
 
-#### Climate variables 
+#### 2.3.1.2 Climate variables 
 
 Climate variables used in this study was obtained from Climate NA.  Climate NA provides monthly, seasonal and yearly gridded climate data. This data was used to generate climate impact of C combustion within Canada’s boreal forests.  
 
-#### 2.4.3 Environmental variables 
+#### 2.3.1.3 Environmental variables 
 
 Aboveground combustion from fire depends on a lot of top tree influence. The environmental variables that we will use for this research includes elevation, Soil properties , slope, aspect, and pre-fire tree cover. The elevation data will be obtained from the Advanced Spaceborne and Thermal Emission and Reflectance Radiometer Global Digital Elevation Model (ASTER GDEM), and then slope and aspect will be derived in ArcGIS or R USING THE DEM.  
 
@@ -62,8 +62,8 @@ Prefire tree cover plays a huge factor and influences below and aboveground comb
 
 The differenced normalised burn ratio  (dNBR) assess changes in fire impacted vegetation using the near and shortwave infrared reflectance  (Key & Benson, 2004). dNBR will also be included as a predictor variable as studies have found out the dNBR correlates significantly with biomass loss. Spectral bands of Landsat 1- 9 wil be downloaded from the USGS and the NIR and SWIR  band s will be used for deriving NBR (NIRSWIR)/(NIR + SWIR).  dNBR will be computed as the  difference between pre-fire  and post fire NBR.  
 
-#### 2.4.4 Remotely sensed variables 
+#### 2.3.1.4 Remotely sensed variables 
 
 Remotely sensed variables used for this studies were all derived from Landsat 7 and 8. This include Landsat band 1 -9, the normalised differenced vegetation indices( NdVI), the topographic wetness index, Tasseled cap indices, and the Landsat dNBR 
 
- 
+

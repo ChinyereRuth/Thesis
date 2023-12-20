@@ -90,13 +90,9 @@ December 2023
 
 \spacing{1.5}
 
-no more than 250 words for the abstract
+Wildfire is the major standing disturbance in Canada. The area burned in Canada over the years has continued to progress with climate change as well as carbon released due to fire mediated disturbances for the year 2023. Here, statistical models will be established between field combustion and remotely sensed data from Landsat imagery as well as other environmental and climate variables obtained from the GEE datasets to estimate carbon emitted from the 2023 wildfires in order to derive a combustion map for 2023. The combustion datasets described here can be used across local and global scale for fire combustion science. The combustion datasets which will be described here [github.com/ChinyereRuth/Canada-Carbon-emission-RDM] can be used for local to continental-scale applications of boreal fire science.
 
-- a description of the research question/knowledge gap – what we know and what we don’t know
-- how your research has attempted to fill this gap
-- a brief description of the methods
-- brief results
-- key conclusions that put the research into a larger context
+Keywords: Wildfire, carbon, spatial modelling, boreal forests 
 
 \pagenumbering{roman}
 
@@ -106,16 +102,19 @@ no more than 250 words for the abstract
 \raggedright
 \newpage
 \tableofcontents
+
 \newpage
 
 ```{r acknowledgments, child='acknowledgments.Rmd'}
 ```
 
 \newpage
+\pagenumbering{arabic}
+
+
 
 ```{r intro, child = 'introduction.Rmd'}
 ```
-\pagenumbering{arabic}
 
 \newpage
 
