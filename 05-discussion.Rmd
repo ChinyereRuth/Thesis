@@ -1,0 +1,25 @@
+---
+title: ''
+output: pdf_document
+header-includes:
+  - \usepackage{float}
+  - \usepackage{sectsty}
+---
+
+
+# 4.0 Discussion
+
+## 4.1 Burned area 
+
+The application of Landsat-derived Normalized Burn Ratio (dNBR) proved instrumental in identifying areas affected by wildfires within Canada's forested regions throughout the month of May. Analyzing the resulting burned area map, generated with Landsat imagery, unveiled notable instances of high burn severity in proximity to the boreal shield and boreal plains, where dNBR thresholds surpassed 0.5. The severity of these burns during the 2014 incidents was found to be intricately linked to a range of influencing factors, such as prefire tree cover, temperature, and vegetation.
+
+These factors, as previously highlighted by Wang et al. (2014), have demonstrated a significant influence on fire behavior. By integrating this knowledge into our analysis, we gain valuable insights into the complexity of wildfire dynamics. Notably, prefire tree cover, ambient temperature, and the type of vegetation contribute substantially to the severity of wildfires in these regions.
+
+The significance of employing dNBR maps extends beyond mere detection; they prove indispensable in the realm of carbon accounting and the implementation of models designed for assessing and managing the ecological and environmental impacts of wildfires. This comprehensive understanding of burn severity factors enhances our ability to develop effective strategies for mitigating the impact of wildfires on forest ecosystems and facilitating informed decision-making in resource management.
+
+## 4.2 Carbon emission model
+
+The aboveground carbon emission model in this study was influenced by prefire tree cover, Landsat dNBR, band 3, band 5, and maximum temperature. Veraverbeke et al. (2015) had previously identified dNBR, elevation, and pre-fire tree cover as crucial factors driving combustion. Additionally, Barrett et al. (2011), using spectral and non-spectral indices, also reported dNBR as one of the top three predictors of combustion.
+
+Future research for this study will involve applying this model to explain the combustion events that occurred in Canada in 2023. This endeavor will contribute to a deeper understanding of the dynamics of combustion fires and further refine our ability to predict and manage such incidents.
+

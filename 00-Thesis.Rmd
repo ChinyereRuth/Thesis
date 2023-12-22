@@ -1,0 +1,153 @@
+---
+output:
+  pdf_document: 
+  number_sections: yes
+  citation_package: natbib
+  geometry: left = 2.5cm, right = 2cm, top = 2cm, bottom = 2cm
+  fontsize: 11pt
+  html_document:
+    df_print: paged
+  word_document: default
+header-includes:
+- \usepackage{float}
+- \usepackage{sectsty}
+- \usepackage{paralist}
+- \usepackage{fancyhdr}
+- \usepackage{lastpage}
+- \usepackage{dcolumn}
+- \usepackage{natbib}
+- \usepackage{setspace}
+- \onehalfspacing
+bibliography: bibliography.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+options(tinytex.verbose = TRUE)
+```
+
+\allsectionsfont{\centering}
+\subsectionfont{\raggedright}
+\subsubsectionfont{\raggedright}
+
+\pagenumbering{gobble}
+
+\begin{centering}
+
+\vspace{3cm}
+
+```{r uni_logo, echo=F, out.width="20%"}
+knitr::include_graphics("img/uniedlogo.png")
+```
+
+\vspace{1cm}
+
+\Large
+{\bf McMaster University}
+
+\Large
+{\bf School Of Earth, Environment and Society}
+
+\vspace{1cm}
+
+\Large
+
+\doublespacing
+{\bf Carbon Emission Mapping from Disturbnaces in Canada and Alaska Using Synthetic aperture radar (SAR), Landsat and Lidar}
+
+\vspace{1 cm}
+
+\normalsize
+\singlespacing
+By
+
+\vspace{0.5 cm}
+
+\Large
+
+{\bf Chinyere Ottah}
+
+\vspace{1.5 cm}
+
+A Thesis Submitted to the School of Graduate Studies in Partial Fulfillment of the Requirements for the Degree Doctor of Philosophy  \\
+in Earth and Environmental Sciences
+
+\vspace{1.5 cm}
+
+\normalsize
+December 2023
+
+\end{centering}
+
+\newpage
+
+\pagenumbering{gobble}
+
+\begin{centering}
+
+{\bf Abstract}
+
+\end{centering}
+
+\spacing{1.5}
+
+Wildfire is the major standing disturbance in Canada.The area burned in Canada over the years has continued to progress with climate change as well as carbon released due to fire mediated disturbances for the year 2023. Here, statistical models will be established between field combustion and remotely sensed data from Landsat imagery as well as other environmental and climate variables obtained from the GEE datasets to estimate carbon emitted from the 2023 wildfires in order to derive a combustion map for 2023. The combustion datasets described here can be used across local and global scale for fire combustion science. The combustion datasets which will be described here [github.com/ChinyereRuth/Thesis] can be used for local to continental-scale applications of boreal fire science.
+
+Keywords: Wildfire, carbon, spatial modelling, boreal forests 
+
+\pagenumbering{roman}
+
+\newpage
+
+\centering
+\raggedright
+\newpage
+\tableofcontents
+
+\newpage
+
+```{r acknowledgments, child='01-acknowledgments.Rmd'}
+```
+
+\newpage
+\pagenumbering{arabic}
+
+
+
+```{r intro, child = '02-introduction.Rmd'}
+```
+
+\newpage
+
+```{r methods, child = '03-methods.Rmd'}
+```
+
+\newpage
+
+```{r results, child = '04-results.Rmd'}
+```
+
+\newpage
+
+```{r discussion, child = '05-discussion.Rmd'}
+```
+
+\newpage
+
+```{r conclusion, child = '06-conclusion.Rmd'}
+```
+
+\newpage
+
+```{r biblio, child = '07-bibliography.Rmd'}
+
+```
+
+\newpage
+
+```{r appendix, child = '08-appendix.Rmd'}
+```
+
+
+
+

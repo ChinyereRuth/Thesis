@@ -1,0 +1,11 @@
+---
+title: ''
+output: pdf_document
+header-includes:
+  - \usepackage{float}
+  - \usepackage{sectsty}
+---
+
+# 5.0 Concluson
+
+In conclusion, the utilization of Landsat-derived dNBR for mapping burned areas within the Canadian forest in May 2014 has proven to be pivotal for carbon emission accounting and enhancement strategies. Complementing this approach, we incorporated mean, minimum, and maximum temperatures to formulate a robust carbon emission model. The results indicated that our Random Forest model effectively explained 38% of the variability in carbon loss. This valuable insight not only underscores the significance of accurate burned area mapping but also sets the stage for future studies to refine and expand upon our model, contributing to a more comprehensive understanding of carbon dynamics within forest ecosystems. As we continue to advance our methodologies, the implications for carbon management and environmental conservation are promising.
